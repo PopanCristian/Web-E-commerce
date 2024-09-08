@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Bistro</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--for the hamburger icon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/Terra_logo.ico' %}"> <!-- icon for tab-->
+
+</head>
+
+<body>
+    <nav class="navbar">
+        
+        <div class="logo">   
+            <img src="{% static 'img/Terra_logo.png' %}">
+        </div>
+
+        <ul class="navbar-items">
+            <li class="navbar-item">
+                <a href="">Home</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="">Menu</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="">Location</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="">Gallery</a>
+            </li>
+
+            <li class="navbar-item">
+                <a href="">Order now</a>
+            </li>
+        </ul>
+        
+        <div class="burger-button">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </nav>
+
+    {% block content%}
+
+    {% endblock%}
+
+    <footer>
+    </footer>
+</body>
+</html>
