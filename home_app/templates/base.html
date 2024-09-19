@@ -28,7 +28,7 @@
             </li>
 
             <li class="navbar-item">
-                <a href="">Location</a>
+                <a href="{% url 'location' %}" class="{% if request.path == '/location/' %}active{% endif %}">Location</a>
             </li>
 
             <li class="navbar-item">
