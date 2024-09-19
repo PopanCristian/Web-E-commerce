@@ -15,7 +15,6 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides"); // Selectează toate slide-urile
-  let dots = document.getElementsByClassName("dot"); // Selectează toate punctele
 
   // Revine la primul slide dacă n depășește numărul total de slide-uri
   if (n > slides.length) {
@@ -32,16 +31,21 @@ function showSlides(n) {
     slides[i].style.display = "none";
   }
 
-  // Dezactivează toate punctele
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
 
   // Afișează slide-ul curent și activează punctul corespunzător
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
   showSlides(slideIndex); // Asigură-te că primul slide este afișat imediat ce pagina se încarcă
 });
+
+window.addEventListener('scroll', function() {
+  let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  document.querySelector('.first-title').style.transform = `translateX(${scrollPosition * -1}px)`;
+
+  document.querySelector('.second-title').style.transform = `translateX(${scrollPosition * 1}px)`;
+});
+
+
