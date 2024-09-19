@@ -36,7 +36,7 @@
             </li>
 
             <li class="navbar-item">
-                <a href="">Order now</a>
+                <a href="{% url 'order'%}" class="{% if request.path == '/order/' %}active{% endif %}">Order now</a>
             </li>
         </ul>
         
