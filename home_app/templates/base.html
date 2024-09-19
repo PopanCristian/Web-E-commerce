@@ -32,7 +32,7 @@
             </li>
 
             <li class="navbar-item">
-                <a href="">Gallery</a>
+                <a href="{% url 'gallery'%}" class="{% if request.path == '/gallery/' %}active{% endif %}">Gallery</a>
             </li>
 
             <li class="navbar-item">
