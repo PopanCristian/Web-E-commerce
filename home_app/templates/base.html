@@ -24,19 +24,19 @@
             </li>
 
             <li class="navbar-item">
-                <a href="">Menu</a>
+                <a href="{% url 'menu'%}" class="{% if request.path == '/menu/' %}active{% endif %}">Menu</a>
             </li>
 
             <li class="navbar-item">
-                <a href="">Location</a>
+                <a href="{% url 'location' %}" class="{% if request.path == '/location/' %}active{% endif %}">Location</a>
             </li>
 
             <li class="navbar-item">
-                <a href="">Gallery</a>
+                <a href="{% url 'gallery'%}" class="{% if request.path == '/gallery/' %}active{% endif %}">Gallery</a>
             </li>
 
             <li class="navbar-item">
-                <a href="">Order now</a>
+                <a href="{% url 'order'%}" class="{% if request.path == '/order/' %}active{% endif %}">Order now</a>
             </li>
         </ul>
         
