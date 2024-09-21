@@ -1,0 +1,182 @@
+* {
+    box-sizing :border-box;
+    margin: 0;
+    background: black;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 10; 
+    background: transparent; 
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    padding: 20px;
+}
+.logo {
+    background: transparent;
+}
+.logo img{
+    align-items: center;
+    margin-left: 50px;
+    width: 100%;
+    max-width:150px;
+    height: auto;
+    background: transparent;
+    
+}
+.navbar-items{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    background: transparent;
+}
+.navbar-item {
+    background: transparent;
+}
+.navbar-items a{
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    transition: color 0.4s ease;
+}
+.navbar-items .navbar-item a.active {
+    color: #b1995f; 
+    border-bottom: 2px solid #b1995f; 
+}
+.navbar-items .navbar-item a:hover {
+    color: #b1995f;  
+    transform: scale(1.2);
+}
+
+.burger-button {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    background: transparent;
+}
+.burger-button i{
+    background: transparent;
+}
+
+@media (max-width : 53rem) {
+    .navbar-items{
+        display: none;
+    }
+    .burger-button{
+        display: block;
+    }
+}
+/* Carousel css start */
+
+
+
+.mySlides{
+    display: none;
+    margin: none;
+    height: 100vh;
+}
+
+
+.carousel-container{
+    position: relative;
+    width: 100%;
+}
+
+.carousel-container img{
+    width: 100%;
+    height: 100vh;   
+    object-fit: fill;  
+}
+
+
+.carousel-button-previous, .carousel-button-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background: transparent;
+}
+
+.carousel-button-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel-button-previous:hover, .carousel-button-next:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+
+.middle-title-carousel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: transparent;
+}
+.first-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #b1995f;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+    background: transparent;
+    transform: translateX(0);
+}
+.first-title, .second-title{
+    transition: transform 0.5s ease-in-out;
+}
+.second-title{
+    font-size: 4rem;
+    margin: 10px 0 0 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+    color: #ceac5e;
+    background: transparent;    
+    transform: translateX(0);
+}
+.custom-line{
+    height: 5px;
+}
+/* about-us section */
+
+.about-us{
+
+    background-color: #b1995f;
+}
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.photo-about-us {
+    background-size: auto 100%;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.text-about-us{
+    color: white;
+}

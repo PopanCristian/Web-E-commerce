@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponseRedirect
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('frontend/', include('frontend.urls')),
-    path('backend/', include('backend.urls'))
-]
+    path('', include('home_app.urls')),
+    path('menu/', include('menu_app.urls')),
+    path('location/', include('location_app.urls')),
+    path('gallery/', include('gallery_app.urls')),
+    path('order/', include('order_app.urls')),
+    path('admin/', admin.site.urls)
+    
+    ]
