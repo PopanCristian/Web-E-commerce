@@ -1,7 +1,7 @@
 * {
     box-sizing :border-box;
     margin: 0;
-    background: black;
+    /* background: black; */
 }
 .navbar{
     display: flex;
@@ -74,6 +74,92 @@
     .burger-button{
         display: block;
     }
+}
+.container-footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #f0c27b,#4b1248);
+}
+.container-informations{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 25%;
+    padding: 20px;
+    
+}
+.info {
+    padding: 5px;
+}
+.col ul{
+    list-style-type:none;
+    padding: 0;
+}
+.col ul li a{
+    text-decoration: none;
+    color: #000;
+}
+.col ul li a:hover{
+    color: #b1995f;
+}
+.icon{
+    text-decoration: none;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-left: 10px;
+   
+}
+.icon > i {
+  color: black;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+  background:transparent
+}
+.icon:hover > i {
+    transform: scale(1.5);
+    background-color : var(--color);
+}
+.icon:before {
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+}
+
+.icon:hover:before {
+    animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+    50% {
+        left: 10%;
+        top: -40%;
+    }
+    100% {
+        left: -15%;
+        top: -15%;
+    }
+}
+.icon:has(.fa-instagram) {
+    --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+.icon:has(.fa-facebook) {
+    --color: #1877f2; 
 }
 /* Carousel css start */
 
@@ -155,9 +241,9 @@
     background: transparent;    
     transform: translateX(0);
 }
-.custom-line{
+/* .custom-line{
     height: 5px;
-}
+} */
 /* about-us section */
 
 .about-us{
@@ -171,12 +257,17 @@
     gap: 20px;
 }
 .photo-about-us {
-    background-size: auto 100%;
     background-position: center;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
+    position: relative;
 }
 .text-about-us{
     color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0px;
+    padding: 50px;
 }
