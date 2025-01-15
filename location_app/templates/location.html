@@ -2,6 +2,13 @@
 {% load static %}
 {% block content %}
 
- <h1 style="color: white;">Suntem in location html</h1>
+    <div id="map"></div>
+    {% block footer %}
+    {% endblock %}
+
+    <script src="{% static 'scripts.js' %}"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&loading=async&callback=initMap&v=beta&libraries=marker">
+    </script>
 
 {% endblock %}

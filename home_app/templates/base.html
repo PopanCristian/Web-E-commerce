@@ -47,11 +47,13 @@
         
 
     </nav>
+    <body class="{% block body_class %}{% endblock %}">
 
     {% block content%}
 
     {% endblock%}
 
+    {% block footer %}
     <footer class="container-footer" >
         <div class="container-informations">
             
@@ -80,12 +82,13 @@
             </div>
         
 
-            <div class="col">
+            <div class="col" id="icons">
                 <h2>Follow Us</h2>
                 <a href="#" class="icon"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a> 
             </div>
         </div>
     </footer>
+    {% endblock %}
 </body>
 </html>

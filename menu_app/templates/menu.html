@@ -2,6 +2,32 @@
 {% load static %}
 {% block content %}
 
- <h1 style="color: white;">Suntem in menu html</h1>
+ <!-- <div class="menu-banner">
+    <div class="image-banner-menu"></div>
+ </div> -->
 
+ <div class="menu-container">
+    
+
+    <div class="menu-cards">
+        <video autoplay muted loop class="background-video">
+            <source src="{% static 'img/menu_background_video.mp4' %}" type="video/mp4">
+        </video>
+
+        <h1 style="color: azure; font-family: Georgia, 'Times New Roman';">Are you looking for the menus ?</h1>
+        
+        <a href="{% static 'img/menu_table_kitchen.jpg' %}" target="_blank">
+            <div class="card" id="left-card">
+                <h2>Kitchen</h2>
+            </div>
+        </a>
+        
+        <a href="{% static 'img/menu_table_drink.jpg' %}" target="_blank">
+            <div class="card" id="right-card">
+                <h2>Bar</h2>
+            </div>
+        </a>
+
+    </div>
+ </div>
 {% endblock %}
