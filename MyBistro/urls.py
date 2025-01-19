@@ -26,6 +26,8 @@ urlpatterns = [
     path('location/', include('location_app.urls')),
     path('gallery/', include('gallery_app.urls')),
     path('order/', include('order_app.urls')),
+    path('login/', include('login_accounts.urls')),
+    path('login/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls)
     
     ]

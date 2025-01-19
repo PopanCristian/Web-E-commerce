@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'menu_app',
     'location_app',
     'gallery_app',
-    'order_app'
+    'order_app',
+    'login_accounts',
 ]
 
 MIDDLEWARE = [
