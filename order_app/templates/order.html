@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suntem in order</title>
-    <h1>Suntem in order si suntem logati</h1>
-</head>
-<body>
-    
-</body>
-</html>
+{%extends 'base.html' %}
+
+{% block content%}
+<h1>SUNTEM IN PAGINA DE ORDER DUPA CE NE-AM logat</h1>
+<h1>fsadfasdfasf</h1>
+<h1>fsadfasdfasf</h1>
+
+<h1>fsadfasdfasf</h1>
+
+<h1>fsadfasdfasf</h1>
+
+<h1>fsadfasdfasf</h1>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'logout' %}" class="btn btn-logout">Logout</a>
+{% endif %}
+{%endblock%}
