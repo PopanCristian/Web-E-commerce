@@ -38,6 +38,18 @@
             <li class="navbar-item">
                 <a href="{% url 'order'%}" class="{% if request.path == '/order/' %}active{% endif %}">Order now</a>
             </li>
+
+            {% if user.is_authenticated %}
+            
+                <li class="navbar-item">
+                    <a href="{% url 'profile' %}" class="{% if request.path == '/profile/' %}active{% endif %}">Profile</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="{% url 'logout' %}" class="{% if request.path == '/logout/' %}active{% endif %}">Logout</a>
+                </li>
+            {% endif %}
+
         </ul>
         
         <div class="burger-button">
