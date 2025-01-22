@@ -11,7 +11,7 @@ def login_signup_view(request):
 
         if 'login' in request.POST:
 
-            username = request.POST['email_login']
+            username = request.POST['username_login']
             password = request.POST['password_login'] # get the credentials
             user = authenticate(request, username = username, password = password)
 
