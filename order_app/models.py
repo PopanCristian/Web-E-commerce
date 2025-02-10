@@ -1,5 +1,7 @@
 import datetime
 from django.db import models
+from login_accounts.models import Customer
+
 
 # Categories of Products
 class Category( models.Model):
@@ -7,12 +9,6 @@ class Category( models.Model):
 
     def __str__(self):
         return self.name_category
-
-class User( models.Model):
-
-    phone = models.CharField(max_length = 10)
-    def __str__(self):
-        return f"User: {self.first_name} {self.last_name} with phone number: {self.phone}"
 
 class Product( models.Model):
     product_name = models.CharField(max_length = 50)
@@ -26,7 +22,7 @@ class Product( models.Model):
 
 class Order( models.Model):
     order_product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    customer = models.ForeignKey(User, on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     adress =models.CharField(max_length=50, blank=False)
     phone = models.CharField(max_length=10, blank = False)

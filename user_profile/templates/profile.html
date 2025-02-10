@@ -1,1 +1,42 @@
 {%extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="profile-container">
+    <h2>Profilul lui {{ user.username }}</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ user.email }}" readonly>
+            <button type="button" class="edit-btn" onclick="enableEdit('email')">✏️</button>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Telefon:</label>
+            <input type="text" id="phone" name="phone" value="{{ user.phone }}" readonly>
+            <button type="button" class="edit-btn" onclick="enableEdit('phone')">✏️</button>
+
+        </div>
+
+        <div class="form-group">
+            
+            <label for="first_name">Prenume:</label>
+            <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}" readonly>
+            <button type="button" class="edit-btn" onclick="enableEdit('first_name')">✏️</button>
+        </div>
+
+        <div class="form-group">
+            
+            <label for="last_name">Nume:</label>
+            <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}" readonly>
+            <button type="button" class="edit-btn" onclick="enableEdit('last_name')">✏️</button>
+        </div>
+
+        <button type="submit" id="save-btn" class="save-btn" style="display: none;">Salvează</button>
+    </form>
+</div>
+<script src="{% static 'scripts.js' %}"></script>
+
+{% endblock %}

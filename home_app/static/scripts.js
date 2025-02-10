@@ -98,5 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
   
 
+function enableEdit(fieldId) {
+  let inputField = document.getElementById(fieldId);
+  inputField.removeAttribute("readonly");
+  inputField.style.backgroundColor = "#fff"; // Schimbă background-ul pentru a indica editabilitatea
 
+  // Afișează butonul Save când se editează ceva
+  document.getElementById("save-btn").style.display = "block";
+}
 
