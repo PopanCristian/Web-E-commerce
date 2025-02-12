@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="profile-container">
-    <h2>Profilul lui {{ user.username }}</h2>
+    <h2>Profil : {{ user.username }}</h2>
 
     <form method="post">
         {% csrf_token %}
@@ -36,3 +36,6 @@
 <script src="{% static 'scripts.js' %}"></script>
 
 {% endblock %}
+
+
+{% block footer%} {%endblock%}
