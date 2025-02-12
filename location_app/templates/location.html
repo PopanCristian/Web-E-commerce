@@ -3,8 +3,13 @@
 {% block content %}
 
     <div id="map"></div>
-    {% block footer %}
-    {% endblock %}
+    <div class="location-info">
+        <p>Locul unde placerea atinge cote maxime: Baia Mare, strada Hortensiei , nr. 2 </p>
+        <h2>Program</h2>
+        <p>De luni pana vineri ne gasiti intre orele 8-15:30</p> 
+    </div>
+    
+    {% block footer %}{% endblock %}
 
     <script src="{% static 'scripts.js' %}"></script>
     <script async

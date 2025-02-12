@@ -423,6 +423,11 @@
     height: 700px; /* The height is 400 pixels */
     width: 100%; /* The width is the width of the web page */
 }
+.location-info{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 /* Login + SignUp */
 .login-page * {
