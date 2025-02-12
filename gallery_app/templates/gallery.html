@@ -1,7 +1,99 @@
 {%extends 'base.html' %}
 {% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">    
+{% endblock %}
+
+{% block body_class %}gallery-page{% endblock %}
+
+
 {% block content %}
 
- <h1 style="color: white;">Suntem in gallery html</h1>
+<div class="container gallery-container">
+
+    <h1>More about our work</h1>
+
+    <!-- <p class="page-description text-center">More about us</p> -->
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza.jpg' %}">
+                        <img src="{% static 'images/terra_poza.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza1.jpg' %}">
+                        <img src="{% static 'images/terra_poza1.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza2.jpg' %}">
+                        <img src="{% static 'images/terra_poza2.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza3.jpg' %}">
+                        <img src="{% static 'images/terra_poza3.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza4.jpg' %}">
+                        <img src="{% static 'images/terra_poza4.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza5.jpg' %}">
+                        <img src="{% static 'images/terra_poza5.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza6.jpg' %}">
+                        <img src="{% static 'images/terra_poza6.jpg' %}">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{% static 'images/terra_poza7.jpg' %}">
+                        <img src="{% static 'images/terra_poza7.jpg' %}">
+                    </a>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 {% endblock %}

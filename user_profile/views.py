@@ -5,11 +5,10 @@ from login_accounts.models import Customer
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
-
-# Create your views here.
+ #ACTUALIZEAZA CU UN SINGUR BUTON
 @login_required
 def profile_view(request):
-    user = User.objects.get(id=request.user.id)  # Obține utilizatorul autentificat
+    user = User.objects.get(id=request.user.id)  
     
     if request.method == 'POST':
         user.email = request.POST.get('email', user.email)
@@ -19,6 +18,6 @@ def profile_view(request):
         
         user.save()
         messages.success(request, "Profil actualizat cu succes!")
-        return redirect('profile')  # Redirecționează către profil
+        return redirect('profile')  
 
     return render(request, 'profile.html', {'user': user})

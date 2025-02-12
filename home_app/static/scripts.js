@@ -98,12 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
   
 
-function enableEdit(fieldId) {
-  let inputField = document.getElementById(fieldId);
-  inputField.removeAttribute("readonly");
-  inputField.style.backgroundColor = "#fff"; // Schimbă background-ul pentru a indica editabilitatea
+function enableEdit() {
+  let inputFields = ['email','phone','first_name','last_name']
+  inputFields.forEach(  field =>{
 
-  // Afișează butonul Save când se editează ceva
+    let input = document.getElementById(field);
+    input.removeAttribute("readonly");
+    input.style.backgroundColor = "#fff";
+    
+  });
+ 
   document.getElementById("save-btn").style.display = "block";
 }
 
