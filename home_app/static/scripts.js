@@ -31,6 +31,15 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const burgerButton = document.querySelector(".burger-button");
+  const navbarItems = document.querySelector(".navbar-items");
+
+  burgerButton.addEventListener("click", function () {
+      navbarItems.classList.toggle("active");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
   if (document.getElementsByClassName("mySlides").length > 0) {
     showSlides(slideIndex);

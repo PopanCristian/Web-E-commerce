@@ -23,11 +23,11 @@
             <li class="navbar-item">
                 <a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">Home</a>
             </li>
-
-            <li class="navbar-item">
-                <a href="{% url 'menu'%}" class="{% if request.path == '/menu/' %}active{% endif %}">Menu</a>
-            </li>
-
+            {% if not user.is_authenticated %}
+                <li class="navbar-item">
+                    <a href="{% url 'menu'%}" class="{% if request.path == '/menu/' %}active{% endif %}">Menu</a>
+                </li>
+            {% endif %}
             <li class="navbar-item">
                 <a href="{% url 'location' %}" class="{% if request.path == '/location/' %}active{% endif %}">Location</a>
             </li>

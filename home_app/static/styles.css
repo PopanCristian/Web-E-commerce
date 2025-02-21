@@ -70,9 +70,24 @@
 @media (max-width : 53rem) {
     .navbar-items{
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 1);
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
     }
+    .navbar-items.active {
+        display: flex;
+
+    }
+
     .burger-button{
         display: block;
+        font-size: 24px;
+        cursor: pointer;
     }
 }
 .container-footer{
