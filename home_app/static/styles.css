@@ -690,7 +690,7 @@ h2 {
 .profile-container{
     width: 100%;
     max-width: 500px;
-    margin: 200px auto;
+    margin: 150px auto;
     padding: 20px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -778,4 +778,41 @@ input:read-only {
 .gallery-page{
     background-color: #121212; /* O nuanță de negru-gri */
 
+}
+
+.alert-slide {
+    display: flex;
+    position: fixed; 
+    top: 110px; 
+    right: -100%; 
+    z-index: 1000; 
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s forwards; 
+    background-color: #cfe2ff;
+    padding: 5px;
+}
+
+@keyframes slideIn {
+    from {
+        right: -100%; 
+    }
+    to {
+        right: 20px; 
+    }
+}
+@keyframes slideOut {
+    from {
+        right: 20px; 
+    }
+    to {
+        right: -100%; 
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    color: #084298;
+    fill: currentColor; /* Folosește culoarea textului părinte */
 }

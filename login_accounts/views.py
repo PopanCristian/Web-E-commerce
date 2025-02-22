@@ -19,7 +19,7 @@ def login_signup_view(request):
                 login(request, user)
                 return redirect('/order/')
             else:
-                messages.success(request, "Fa-ti cont băi nene ")
+                messages.success(request, "Wrong login credentials")
 
         elif 'signup' in request.POST:
 

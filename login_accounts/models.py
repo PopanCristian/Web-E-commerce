@@ -4,6 +4,6 @@ from django.conf import settings
 
 
 class Customer(AbstractUser):
-    phone = models.CharField(max_length=15, blank=True, null=True)
+    phone = models.CharField(max_length=10, blank=True, null=True)
     first_name = models.CharField(max_length=50, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)

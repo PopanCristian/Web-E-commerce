@@ -120,3 +120,12 @@ function enableEdit() {
   document.getElementById("save-btn").style.display = "block";
 }
 
+setTimeout(function() {
+  var alerts = document.querySelectorAll('.alert-slide');
+  alerts.forEach(function(alert) {
+      alert.style.animation = 'slideOut 0.5s forwards'; 
+      setTimeout(function() {
+          alert.style.display = 'none'; 
+      }, 500); 
+  });
+}, 3200);

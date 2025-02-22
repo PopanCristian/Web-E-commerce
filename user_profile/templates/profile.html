@@ -1,6 +1,18 @@
 {%extends 'base.html' %}
 {% load static %}
+
 {% block content %}
+{% if messages %}
+    {% for message in messages %}
+        
+    <div class="alert alert-{{ message.tags }} alert-slide alert-dismissible fade show"" role="alert">
+        <svg class="icon" width="5" height="5">
+            <use href="#info-fill"></use>
+        </svg>
+        {{ message }}
+      </div>
+    {% endfor %}
+{% endif %}
 <div class="profile-container">
     <h2>Profil : {{ user.username }}</h2>
 
@@ -33,6 +45,8 @@
         <button type="submit" id="save-btn" class="save-btn" style="display: none;">Save</button>
     </form>
 </div>
+
+
 <script src="{% static 'scripts.js' %}"></script>
 
 {% endblock %}

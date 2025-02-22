@@ -4,11 +4,17 @@
 
 {% block content %}
     <body id="login-page">
-    {% if messages%}
-        {%for message in messages%}
+        {% if messages %}
+        {% for message in messages %}
+            
+        <div class="alert alert-{{ message.tags }} alert-slide alert-dismissible fade show" role="alert" style="color: red;">
+            <svg class="icon" width="5" height="5" style="color: red;">
+                <use href="#info-fill"></use>
+            </svg>
             {{ message }}
+          </div>
         {% endfor %}
-    {% endif%}
+    {% endif %}
     <div class="container" id="container">
         
         <div class="form-container register-container">
