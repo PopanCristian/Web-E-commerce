@@ -5,7 +5,8 @@ from login_accounts.models import Customer
 
 # Categories of Products
 class Category( models.Model):
-    name_cateogiry = models.CharField(max_length = 30)
+    name_category = models.CharField(max_length = 30)
+    image = models.ImageField(upload_to='categories_img/', blank=True, null=True)
 
     def __str__(self):
         return self.name_category
@@ -18,7 +19,7 @@ class Product( models.Model):
     product_image = models.ImageField(upload_to='images_products')
 
     def __str__(self):
-        return f"produsul cu numele {self.product_name}"
+        return f"{self.product_name}"
 
 class Order( models.Model):
     order_product = models.ForeignKey(Product, on_delete=models.CASCADE)

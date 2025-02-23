@@ -1,8 +1,26 @@
-{%extends 'base.html' %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-cards">
+    <h1 class="general-text">If you read this, it means hunger has won!</h1>
 
-{% block content%}
-<h1>SUNTEM IN PAGINA DE ORDER DUPA CE NE-AM logat</h1>
+    {% if categories %}
+        <div class="row">
+            {% for category in categories %}
+                <div class="category-card">
+                    {% if category.image %} 
+                        <img src="{{ category.image.url }}" class="card-img" alt="{{ category.name_category }}">
+                    {% else %} 
+                        <img src="media/categories_img/default_img.png" class="card-img" alt="{{ category.name_category }}">
+                    {% endif %}
+                    <h5 class="card-title">{{ category.name_category }}</h5>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">Nu există categorii disponibile.</p>
+    {% endif %}
 
-
-
-{%endblock%}
+    
+</div>
+{% endblock %}

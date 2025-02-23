@@ -95,6 +95,7 @@
     height: 13%;
     background: linear-gradient(to right, #f0c27b,#4b1248);
     bottom: 0;
+
 }
 .container-informations{
     width: 85%;
@@ -144,7 +145,7 @@
 }
 .icon > i {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1rem;
   transition: all 0.2s;
   background:transparent
 }
@@ -238,11 +239,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
     background: transparent;
 }
 .first-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin: 0;
     color: #b1995f;
@@ -255,7 +255,7 @@
     transition: transform 0.5s ease-in-out;
 }
 .second-title{
-    font-size: 4rem;
+    font-size: 4.5rem;
     margin: 10px 0 0 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     font-style: italic;
@@ -814,5 +814,70 @@ input:read-only {
     width: 20px;
     height: 20px;
     color: #084298;
-    fill: currentColor; /* Folosește culoarea textului părinte */
+    fill: currentColor; 
+}
+.container-cards {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.general-text {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.card-img {
+    width: 100%; 
+    height: 120px; 
+    object-fit:contain; 
+    border-radius: 10px 10px 0 0; 
+    margin-bottom: 15px;
+}
+.card-title {
+    font-size: 1.5rem;
+    color: #BAB86C;
+    margin-bottom: 15px;
+}
+
+.text-center {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #f13232;
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .general-text {
+        font-size: 2rem;
+    }
 }

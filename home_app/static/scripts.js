@@ -49,10 +49,22 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener('scroll', function() {
   let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-  document.querySelector('.first-title').style.transform = `translateX(${scrollPosition * -1}px)`;
+  let firstTitle = document.querySelector('.first-title');
+  let secondTitle = document.querySelector('.second-title');
 
-  document.querySelector('.second-title').style.transform = `translateX(${scrollPosition * 1}px)`;
+  if (firstTitle) {
+    firstTitle.style.transform = `translateX(${scrollPosition * -1}px)`;
+  } else {
+    console.warn("Elementul .first-title nu a fost găsit!");
+  }
+
+  if (secondTitle) {
+    secondTitle.style.transform = `translateX(${scrollPosition * 1}px)`;
+  } else {
+    console.warn("Elementul .second-title nu a fost găsit!");
+  }
 });
+
 
 //GoogleMapsAPI js code
 
