@@ -54,6 +54,12 @@
                 <li class="navbar-item">
                     <a href="{% url 'logout' %}" class="{% if request.path == '/logout/' %}active{% endif %}">Logout</a>
                 </li>
+
+                <li class="navbar-item">
+                    <a href="{% url 'cart:cart_view' %}" class="cart-button">
+                        🛒 Cart (<span id="cart-count">{{ total_quantity }}</span>)
+                    </a>
+                </li>
             {% endif %}
 
         </ul>

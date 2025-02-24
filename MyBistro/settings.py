@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'order_app',
     'login_accounts',
     'user_profile',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -60,6 +61,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.views.cart_total_quantity',
             ],
         },
     },
@@ -117,6 +119,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = []
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CART_SESSION_ID = 'cart'
 
 
 # Default primary key field type

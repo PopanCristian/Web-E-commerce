@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-cards-products">
+    <h1 class="category-text">{{ category.name_category }}</h1>
+    
+    {% if products %}
+        <div class="row-product">
+            {% for product in products %}
+                <div class="product-card">
+                    {% if product.product_image %}
+                        <img src="{{ product.product_image.url }}" class="product-img" alt="{{ product.name }}">
+                    {% else %}
+                        <img src="{% static 'media/products/default_product.png' %}" class="product-img" alt="{{ product.name }}">
+                    {% endif %}
+                    <h5 class="product-title">{{ product.product_name }}</h5>
+                    <p class="product-price">{{ product.product_price }} RON</p>
+                    
+                    <form action="{% url 'cart:add_to_cart' product.id %}" method="post" class="form-product">
+                        {% csrf_token %}
+                        <button type="submit" class="buy-button">Cumpără</button>
+                    </form>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">Nu există produse în această categorie.</p>
+    {% endif %}
+</div>
+{% endblock %}

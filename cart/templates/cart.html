@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Coșul de cumpărături</h2>
+<div class="container-cart">
+    {% if cart_items %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Produs</th>
+                    <th>Preț</th>
+                    <th>Cantitate</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart_items %}
+                <tr>
+                    <td>{{ item.product.product_name }}</td>
+                    <td>{{ item.product.product_price }} RON</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.total_price }} RON</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h3>Total: {{ total_price }} RON</h3>
+    {% else %}
+        <p class="empty-p">Coșul tău este gol.</p>
+    {% endif %}
+</div>
+{% endblock %}

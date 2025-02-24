@@ -7,14 +7,14 @@
     {% if categories %}
         <div class="row">
             {% for category in categories %}
-                <div class="category-card">
+                <a href="{% url 'category_products' category.name_category %}" class="category-card">
                     {% if category.image %} 
-                        <img src="{{ category.image.url }}" class="card-img" alt="{{ category.name_category }}">
+                        <img src="{{ category.image.url }}" class="card-img">
                     {% else %} 
-                        <img src="media/categories_img/default_img.png" class="card-img" alt="{{ category.name_category }}">
+                        <img src="media/categories_img/default_img.png" class="card-img">
                     {% endif %}
                     <h5 class="card-title">{{ category.name_category }}</h5>
-                </div>
+                </a>
             {% endfor %}
         </div>
     {% else %}
