@@ -15,7 +15,6 @@ urlpatterns = [
     path('gallery/', include('gallery_app.urls')),
     path('order/', include('order_app.urls')),
     path('login/', include('login_accounts.urls')),
-    path('login/', include('django.contrib.auth.urls')),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('profile/',include ('user_profile.urls')),
     path('cart/', include('cart.urls')),

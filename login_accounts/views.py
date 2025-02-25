@@ -29,7 +29,7 @@ def login_signup_view(request):
             user = Customer.objects.create_user(username=username, password=password, email=email)
             user.save()
             login(request, user)
-            return redirect('home')  # redirecționează după înregistrare
+            return redirect('home')  # redirect after signup
     
     return render(request, 'login&signup.html') # just send de login/sigup page
 
